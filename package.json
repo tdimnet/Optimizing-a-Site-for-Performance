@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tdimnet/Optimizing-a-Site-for-Performance#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
   }
 }
