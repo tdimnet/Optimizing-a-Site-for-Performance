@@ -5,7 +5,14 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
     sass = require('gulp-sass'),
-    maps = require('gulp-sourcemaps');
+    maps = require('gulp-sourcemaps'),
+   image = require('gulp-image');
+
+gulp.task("optimizeImages", function() {
+  gulp.src("fixtures/photos/*")
+  .pipe(image())
+  .pipe(gulp.dest('img/photos/'));
+});
 
 gulp.task("concatScripts", function() {
   gulp.src([
