@@ -9,9 +9,9 @@ var gulp = require('gulp'),
    image = require('gulp-image');
 
 gulp.task("optimizeImages", function() {
-  gulp.src("fixtures/photos/*")
+  return gulp.src(['./img/photos/*'])
   .pipe(image())
-  .pipe(gulp.dest('img/photos/'));
+  .pipe(gulp.dest('./img/photos/'));
 });
 
 gulp.task("concatScripts", function() {
@@ -46,4 +46,5 @@ gulp.task("compileSass", function() {
 gulp.task('build', [
   'minifyScripts',
   'compileSass',
+  'optimizeImages'
 ]);
